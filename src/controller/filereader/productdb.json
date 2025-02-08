@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "description": "A high-performance laptop"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "description": "A latest-gen smartphone"
+  },
+  {
+    "id": 3,
+    "name": "Washing Machine",
+    "description": "Multi function to wash and dry cloths"
+  }
+]

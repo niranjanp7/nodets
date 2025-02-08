@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+  head
+    title Registration Form
+    style.
+      body {
+        font-family: sans-serif;
+      }
+      form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .cancel-button {
+        background-color: #f44336;
+        margin-left: 10px;
+      }
+      p.error {
+        color: #f44336;
+        font-size: 18px;
+      }
+      p.success {
+        color: #4CAF50;
+        font-size: 18px;
+      }
+
+  body
+    h1 Registration
+
+    p(class=type) #{message}
+
+    form(method='post', action='/auth/register')
+      label(for='username') Username:
+      input(type='text', id='username', name='username', required)
+
+      label(for='email') Email:
+      input(type='email', id='email', name='email', required)
+
+      label(for='password') Password:
+      input(type='password', id='password', name='password', required)
+
+      button(type='submit') Register
+      button(type='button', class='cancel-button', onclick="window.location.href='/auth'") Cancel
+
