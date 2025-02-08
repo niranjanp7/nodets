@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    title Welcome to MyWebsite.com
+    style.
+      body {
+        font-family: sans-serif;
+        text-align: center; /* Center the content */
+        margin-top: 50px; /* Add some top margin */
+      }
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin: 0 10px; /* Add some margin between buttons */
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .signin-button {
+          background-color: #007bff; /* Blue */
+      }
+
+
+  body
+    h1 Welcome to MyWebsite.com
+    p Learning NodeJs
+
+    button(type='button', onclick="window.location.href='/auth/register'") New User
+    button(type='button', class="signin-button", onclick="window.location.href='/auth/login'") Sign In
