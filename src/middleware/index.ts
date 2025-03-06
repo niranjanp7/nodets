@@ -1,18 +1,5 @@
-import { authRequest, jwtAuthToken } from './auth/auth';
-import { logRequestInfo } from './logger/logger';
-import { upload } from './upload/uploads';
-
-const AuthMiddleware = {
-    authRequest,
-    jwtAuthToken
-};
-
-const LogsMiddleware = {
-    logRequestInfo
-};
-
-const UploadMiddleware = {
-    upload
-};
+import * as AuthMiddleware from './auth/auth';
+import * as LogsMiddleware from './logger/logger';
+import * as UploadMiddleware from './upload/uploads';
 
 export { AuthMiddleware, LogsMiddleware, UploadMiddleware };
