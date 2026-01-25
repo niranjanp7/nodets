@@ -1,8 +1,9 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 
 export const uploadFile = (req: Request, res: Response) => {
-    if (!req.file) {
+    if (!req.files) {
         res.status(400).send('No file uploaded.');
+        return;
     }
 
     res.status(200).json({

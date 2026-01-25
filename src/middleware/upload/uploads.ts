@@ -1,5 +1,5 @@
-import path from 'path';
-import fs from 'fs';
+import fs from 'node:fs';
+import path from 'node:path';
 import multer from 'multer';
 
 const uploadDir = path.join(__dirname, 'uploads');
@@ -8,10 +8,10 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 const storage = multer.diskStorage({
-    destination: function (_, file, cb) {
+    destination: (_, _file, cb) => {
         cb(null, uploadDir);
     },
-    filename: function (_, file, cb) {
+    filename: (_, file, cb) => {
         cb(null, file.originalname);
     }
 });

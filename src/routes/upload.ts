@@ -5,6 +5,6 @@ import { UploadController } from "../controller";
 
 const router = Router();
 
-router.post('/', UploadMiddleware.upload.single('file'), UploadController.uploadFile);
+router.post('/', UploadMiddleware.upload.array('file'), UploadController.uploadFile);
 
 export default router;
